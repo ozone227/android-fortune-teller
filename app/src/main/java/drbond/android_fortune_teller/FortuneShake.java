@@ -1,14 +1,10 @@
 package drbond.android_fortune_teller;
 
-/**
- * Created by 388152 on 7/12/17.
- */
-
 import android.hardware.SensorManager;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
-import java.lang.Math.*;
+
 
 public class FortuneShake implements SensorEventListener {
     private SensorManager mSensorManager;
@@ -73,9 +69,5 @@ public class FortuneShake implements SensorEventListener {
                 mListener.onShake(mShakeCount);
             }
         }
-    }
-
-    public FortuneShake() {
-        super();
     }
 }
