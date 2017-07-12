@@ -17,23 +17,22 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintVertical_bias="0.147" />
+        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintVertical_bias="0.128"
+        android:layout_marginTop="8dp" />
 
     <EditText
         android:layout_width="384dp"
         android:layout_height="59dp"
         android:inputType="number"
-        android:id="@+id/editText"
+        android:id="@+id/enterQuestion"
         android:text="@string/editTextString"
         android:layout_column="0"
         android:maxLength="10"
         android:ems="10"
         android:layout_columnSpan="2"
         android:padding="12dp"
-        android:elevation="4dp"
-        tools:layout_editor_absoluteY="-4dp"
-        tools:layout_editor_absoluteX="0dp" />
+        android:elevation="4dp" />
 
     <TextView
         android:id="@+id/answerText"
@@ -55,7 +54,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintVertical_bias="0.203" />
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintVertical_bias="0.745" />
 
 </android.support.constraint.ConstraintLayout>
