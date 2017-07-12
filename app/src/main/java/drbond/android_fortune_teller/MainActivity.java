@@ -23,9 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
     // Prepare Strings for the Fortunes
     String userQuestion = "";
-    String[] fortunes = getResources().getStringArray(R.array.fortunes);
-    String randomStr = fortunes[new Random().nextInt(fortunes.length)];
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // TextView References
-        questionText = (TextView) findViewById(R.id.questionText);
         answerText = (TextView) findViewById(R.id.answerText);
 
         // TextWatchers
@@ -50,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onShake(int count) {
+                String[] fortunes = getResources().getStringArray(R.array.fortunes);
+                String randomStr = fortunes[new Random().nextInt(fortunes.length)];
                 answerText.setText(randomStr);
             }
         });
@@ -66,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             userQuestion = s.toString();
-            questionText.setText(userQuestion);
         }
 
         @Override
