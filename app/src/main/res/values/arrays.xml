@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fortunes">
+        <item>I don\'t think so!</item>
+        <item>Not likely!</item>
+        <item>We don\'t talk like that.</item>
+        <item>Stop Shaking Me.</item>
+        <item>Go Away</item>
+        <item>You\'re killing me Smalls.</item>
+    </string-array>
+</resources>
