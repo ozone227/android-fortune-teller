@@ -1,9 +1,12 @@
 package drbond.android_fortune_teller;
 
+import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import java.util.*;
@@ -12,9 +15,9 @@ import android.hardware.Sensor;
 import android.content.*;
 
 
+
 public class MainActivity extends AppCompatActivity {
     private TextView answerText;
-    private TextView questionText;
 
     // The following are used for the shake detection
     private SensorManager mSensorManager;
@@ -24,10 +27,26 @@ public class MainActivity extends AppCompatActivity {
     // Prepare Strings for the Fortunes
     String userQuestion = "";
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        // create button click
+        Button fortuneButton;
+
+        fortuneButton = (Button) findViewById(R.id.fortuneButton);
+        fortuneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String[] fortunes = getResources().getStringArray(R.array.fortunes);
+                String randomStr = fortunes[new Random().nextInt(fortunes.length)];
+                answerText.setText(randomStr);
+            }
+        });
+
 
         // TextView References
         answerText = (TextView) findViewById(R.id.answerText);
@@ -36,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         EditText enterQuestion =
                 (EditText) findViewById(R.id.enterQuestion);
         enterQuestion.addTextChangedListener(enterQuestionTextWatcher);
+
 
         // ShakeDetector initialization
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
@@ -53,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
 
     // listener object for DownPayment EditText
     private final TextWatcher enterQuestionTextWatcher = new TextWatcher() {

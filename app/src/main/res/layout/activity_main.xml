@@ -1,49 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="drbond.android_fortune_teller.MainActivity">
+    tools:context="drbond.android_fortune_teller.MainActivity"
+    android:paddingLeft="64dp"
+    android:paddingRight="64dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:columnCount="2"
+    android:useDefaultMargins="true">
 
     <TextView
         android:id="@+id/introText"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/instructions"
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.313"
-        app:layout_constraintVertical_bias="0.128"
-        android:layout_marginTop="8dp" />
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+         />
 
     <EditText
-        android:layout_width="384dp"
-        android:layout_height="59dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:inputType="textCapSentences|textAutoCorrect"
         android:id="@+id/enterQuestion"
         android:hint="@string/editTextString"
         android:layout_column="0"
+        android:layout_columnSpan="2"
         android:maxLength="40"
         android:ems="10"
-        android:layout_columnSpan="2"
         android:padding="12dp"
-        android:elevation="4dp" />
+        android:elevation="4dp"
+     />
 
+    <ImageView
+        android:id="@+id/magic8Ball"
+        android:src="@drawable/Magic8Ball"
+        android:layout_width="match_parent"
+        android:layout_height="208dp"
+        android:textAlignment="textStart"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_centerInParent="true"
+        />
 
     <TextView
         android:id="@+id/answerText"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="textStart"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerInParent="true"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/fortuneButton"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:text="@string/button_text"
+        android:textColor="@color/colorPrimaryDark"
+        android:elevation="4dp"
+        android:layout_gravity="center_vertical|center_horizontal"      />
+=
+</GridLayout>
