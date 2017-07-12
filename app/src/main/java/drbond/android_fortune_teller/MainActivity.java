@@ -12,8 +12,6 @@ import android.hardware.Sensor;
 import android.content.*;
 
 
-
-
 public class MainActivity extends AppCompatActivity {
     private TextView answerText;
     private TextView questionText;
@@ -22,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private SensorManager mSensorManager;
     private Sensor mAccelerometer;
     private FortuneShake mShakeDetector;
+
+    // Prepare Strings for the Fortunes
     String userQuestion = "";
     String[] fortunes = getResources().getStringArray(R.array.fortunes);
     String randomStr = fortunes[new Random().nextInt(fortunes.length)];
@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         enterQuestion.addTextChangedListener(enterQuestionTextWatcher);
 
         // ShakeDetector initialization
-        // Sensor mAccelerometer = mAccelerometer;
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mAccelerometer = mSensorManager
                 .getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -51,11 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onShake(int count) {
-				/*
-				 * The following method, "handleShakeEvent(count):" is a stub //
-				 * method you would use to setup whatever you want done once the
-				 * device has been shook.
-				 */
                 answerText.setText(randomStr);
             }
         });
@@ -80,12 +74,4 @@ public class MainActivity extends AppCompatActivity {
 
         }
     };
-
-
-
-
-
-
-
-
 }
