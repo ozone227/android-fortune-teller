@@ -19,6 +19,7 @@ import android.content.*;
 public class MainActivity extends AppCompatActivity {
     private TextView answerText;
 
+    // FUTURE USE
     // The following are used for the shake detection
     private SensorManager mSensorManager;
     private Sensor mAccelerometer;

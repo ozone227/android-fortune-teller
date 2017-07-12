@@ -15,10 +15,10 @@
 
     <TextView
         android:id="@+id/introText"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/instructions"
-        android:textAlignment="textStart"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:layout_column="0"
         android:layout_columnSpan="2"
@@ -40,7 +40,7 @@
 
     <ImageView
         android:id="@+id/magic8Ball"
-        android:src="@drawable/Magic8Ball"
+        android:src="@drawable/magic8ball"
         android:layout_width="match_parent"
         android:layout_height="208dp"
         android:textAlignment="textStart"
@@ -54,11 +54,13 @@
         android:id="@+id/answerText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="textStart"
+        android:textAlignment="center"
         android:layout_column="0"
         android:layout_columnSpan="2"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:layout_centerInParent="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAllCaps="true"
         />
 
     <Button
@@ -71,6 +73,7 @@
         android:text="@string/button_text"
         android:textColor="@color/colorPrimaryDark"
         android:elevation="4dp"
-        android:layout_gravity="center_vertical|center_horizontal"      />
+        android:layout_gravity="center_vertical|center_horizontal"
+        />
 =
 </GridLayout>
