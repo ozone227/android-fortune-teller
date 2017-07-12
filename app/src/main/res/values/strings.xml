@@ -3,4 +3,5 @@
     <string name="instructions">Ask a Question then Shake for the Answer</string>
     <string name="button_text">Fortune</string>
     <string name="editTextString">Question</string>
+    <string name="answerTextString"></string>
 </resources>

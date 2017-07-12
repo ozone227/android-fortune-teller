@@ -33,6 +33,17 @@
         android:layout_columnSpan="2"
         android:padding="12dp"
         android:elevation="4dp" />
+    <TextView
+        android:id="@+id/questionText"
+        android:text="@string/answerTextString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/answerText"
